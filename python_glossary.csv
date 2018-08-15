@@ -1,0 +1,146 @@
+term,description
+...,"The default Python prompt of the interactive shell when entering code for an indented code block, when within a pair of matching left and right delimiters (parentheses, square brackets, curly braces or triple quotes), or after specifying a decorator."
+__future__,A pseudo-module which programmers can use to enable new language features which are not compatible with the current interpreter.
+__slots__,"A declaration inside a class that saves memory by pre-declaring space for instance attributes and eliminating instance dictionaries. Though popular, the technique is somewhat tricky to get right and is best reserved for rare cases where there are large numbers of instances in a memory-critical application."
+>>>,The default Python prompt of the interactive shell. Often seen for code examples which can be executed interactively in the interpreter.
+2to3,A tool that tries to convert Python 2.x code to Python 3.x code by handling most of the incompatibilities which can be detected by parsing the source and traversing the parse tree.
+abs,Return the absolute value of a number
+abstract base class,"Complement duck-typing by providing a way to define interfaces when other techniques like hasattr() would be clumsy or subtly wrong (for example with magic methods). ABCs introduce virtual subclasses, which are classes that don’t inherit from a class but are still recognized by isinstance() and issubclass(); see the abc module documentation. Python comes with many built-in ABCs for data structures (in the collections.abc module), numbers (in the numbers module), streams (in the io module), import finders and loaders (in the importlib.abc module). You can create your own ABCs with the abc module."
+annotation,"A label associated with a variable, a class attribute or a function parameter or return value, used by convention as a type hint."
+argument,A value passed to a function (or method) when calling the function. There are two kinds of argument:
+assert,Used during debugging to check for conditions that ought to apply
+assignment,Giving a value to a variable
+asynchronous context manager,An object which controls the environment seen in an async with statement by defining __aenter__() and__aexit__() methods. Introduced by PEP 492.
+asynchronous generator,A function which returns an asynchronous generator iterator. It looks like a coroutine function defined with async def except that it contains yield expressions for producing a series of values usable in an asyncfor loop.
+asynchronous generator iterator,An object created by a asynchronous generator function.
+asynchronous iterable,"An object, that can be used in an async for statement. Must return an asynchronous iterator from its__aiter__() method. Introduced by PEP 492."
+asynchronous iterator,An object that implements the __aiter__() and __anext__() methods. __anext__ must return an awaitable object. async for resolves the awaitables returned by an asynchronous iterator’s __anext__()method until it raises a StopAsyncIteration exception. Introduced by PEP 492.
+attribute,"A value associated with an object which is referenced by name using dotted expressions. For example, if an object o has an attribute a it would be referenced as o.a."
+awaitable,An object that can be used in an await expression. Can be a coroutine or an object with an __await__()method. See also PEP 492.
+BDFL,"Benevolent Dictator For Life, a.k.a. Guido van Rossum, Python’s creator."
+binary file,"A file object able to read and write bytes-like objects. Examples of binary files are files opened in binary mode ('rb', 'wb' or 'rb+'), sys.stdin.buffer, sys.stdout.buffer, and instances of io.BytesIO andgzip.GzipFile."
+block,Section of code which is grouped together
+break,Used to exit a for loop or a while loop.
+bytecode,"Python source code is compiled into bytecode, the internal representation of a Python program in the CPython interpreter. The bytecode is also cached in .pyc files so that executing the same file is faster the second time (recompilation from source to bytecode can be avoided). This “intermediate language” is said to run on a virtual machine that executes the machine code corresponding to each bytecode. Do note that bytecodes are not expected to work between different Python virtual machines, nor to be stable between Python releases."
+bytes-like object,"An object that supports the Buffer Protocol and can export a C-contiguous buffer. This includes all bytes,bytearray, and array.array objects, as well as many common memoryview objects. Bytes-like objects can be used for various operations that work with binary data; these include compression, saving to a binary file, and sending over a socket."
+class,A template for creating user-defined objects. Class definitions normally contain method definitions which operate on instances of the class.
+class variable,"A variable defined in a class and intended to be modified only at class level (i.e., not in an instance of the class)."
+compiler,Translates a program written in a high-level language into a low-level language.
+complex number,"An extension of the familiar real number system in which all numbers are expressed as a sum of a real part and an imaginary part. Imaginary numbers are real multiples of the imaginary unit (the square root of -1), often written i in mathematics or j in engineering. Python has built-in support for complex numbers, which are written with this latter notation; the imaginary part is written with a j suffix, e.g., 3+1j. To get access to complex equivalents of the math module, use cmath. Use of complex numbers is a fairly advanced mathematical feature. If you’re not aware of a need for them, it’s almost certain you can safely ignore them."
+conditional statement,Statement that contains an if or if/else.
+context manager,An object which controls the environment seen in a with statement by defining __enter__() and __exit__() methods. See PEP 343.
+contiguous,"A buffer is considered contiguous exactly if it is either C-contiguous or Fortran contiguous. Zero-dimensional buffers are C and Fortran contiguous. In one-dimensional arrays, the items must be laid out in memory next to each other, in order of increasing indexes starting from zero. In multidimensional C-contiguous arrays, the last index varies the fastest when visiting items in order of memory address. However, in Fortran contiguous arrays, the first index varies the fastest."
+continue,"Used to skip the current block, and return to the ""for"" or ""while"" statement"
+coroutine,A more generalized form of subroutines. Subroutines are entered at one point and exited at another point.
+coroutine function,"A function which returns a coroutine object. A coroutine function may be defined with the async defstatement, and may contain await, async for, and async with keywords. These were introduced by PEP 492."
+CPython,"The canonical implementation of the Python programming language, as distributed on python.org. "
+debugging,The process of finding and removing programming errors.
+decorator,"A function returning another function, usually applied as a function transformation using the @wrappersyntax. Common examples for decorators are classmethod() and staticmethod()."
+def,Defines a function or method
+descriptor,"Any object which defines the methods __get__(), __set__(), or __delete__(). When a class attribute is a descriptor, its special binding behavior is triggered upon attribute lookup. Normally, using a.b to get, set or delete an attribute looks up the object named b in the class dictionary for a, but if b is a descriptor, the respective descriptor method gets called. Understanding descriptors is a key to a deep understanding of Python because they are the basis for many features including functions, methods, properties, class methods, static methods, and reference to super classes."
+dictionary,"An associative array, where arbitrary keys are mapped to values. The keys can be any object with __hash__() and __eq__() methods. Called a hash in Perl."
+dictionary view,"The objects returned from dict.keys(), dict.values(), and dict.items() are called dictionary views. They provide a dynamic view on the dictionary’s entries, which means that when the dictionary changes, the view reflects these changes. To force the dictionary view to become a full list use list(dictview). "
+distutils,"Package included in the Python Standard Library for installing, building and
+Package included in the Python Standard Library for installing, building and distributing Python code."
+docstring,"A string literal which appears as the first expression in a class, function or module. While ignored when the suite is executed, it is recognized by the compiler and put into the __doc__ attribute of the enclosing class, function or module. Since it is available via introspection, it is the canonical place for documentation of the object."
+duck-typing,"A programming style which does not look at an object’s type to determine if it has the right interface; instead, the method or attribute is simply called or used (“If it looks like a duck and quacks like a duck, it must be a duck.”) By emphasizing interfaces rather than specific types, well-designed code improves its flexibility by allowing polymorphic substitution. Duck-typing avoids tests using type() or isinstance(). (Note, however, that duck-typing can be complemented with abstract base classes.) Instead, it typically employs hasattr()tests or EAFP programming."
+EAFP,Easier to ask for forgiveness than permission. This common Python coding style assumes the existence of valid keys or attributes and catches exceptions if the assumption proves false. This clean and fast style is characterized by the presence of many try and except statements. The technique contrasts with the LBYLstyle common to many other languages such as C.
+exceptions,"Means of breaking out of the normal flow of control of a code block in order to
+Means of breaking out of the normal flow of control of a code block in order to handle errors or other exceptional conditions"
+expression,"A piece of syntax which can be evaluated to some value. In other words, an expression is an accumulation of expression elements like literals, names, attribute access, operators or function calls which all return a value. In contrast to many other languages, not all language constructs are expressions. There are also statements which cannot be used as expressions, such as if. Assignments are also statements, not expressions."
+extension module,"A module written in C or C++, using Python’s C API to interact with the core and with user code."
+file object,"An object exposing a file-oriented API (with methods such as read() or write()) to an underlying resource. Depending on the way it was created, a file object can mediate access to a real on-disk file or to another type of storage or communication device (for example standard input/output, in-memory buffers, sockets, pipes, etc.). File objects are also called file-like objects or streams."
+filter,"filter(function, sequence) returns a sequence consisting of those items from the sequence for which function(item) is true"
+finder,An object that tries to find the loader for a module that is being imported.
+float,An immutable floating point number.
+floor division,"Mathematical division that rounds down to nearest integer. The floor division operator is //. For example, the expression 11 // 4 evaluates to 2 in contrast to the 2.75 returned by float true division. Note that (-11) // 4 is -3 because that is -2.75 rounded downward. "
+f-string,String literals prefixed with 'f' or 'F' are commonly called “f-strings” which is short for formatted string literals. 
+function,"A series of statements which returns some value to a caller. It can also be passed zero or more argumentswhich may be used in the execution of the body. See also parameter, method, and the Function definitionssection."
+function annotation,An annotation of a function parameter or return value.
+garbage collection,The process of freeing memory when it is not used anymore. Python performs garbage collection via reference counting and a cyclic garbage collector that is able to detect and break reference cycles. The garbage collector can be controlled using the gc module.
+generator,A function which returns a generator iterator. It looks like a normal function except that it contains yieldexpressions for producing a series of values usable in a for-loop or that can be retrieved one at a time with the next() function.
+generator expression,"An expression that returns an iterator. It looks like a normal expression followed by a for expression defining a loop variable, range, and an optional if expression. The combined expression generates values for an enclosing function:"
+generator iterator,An object created by a generator function.
+generic function,A function composed of multiple functions implementing the same operation for different types. Which implementation should be used during a call is determined by the dispatch algorithm.
+global interpreter lock,"The mechanism used by the CPython interpreter to assure that only one thread executes Python bytecodeat a time. This simplifies the CPython implementation by making the object model (including critical built-in types such as dict) implicitly safe against concurrent access. Locking the entire interpreter makes it easier for the interpreter to be multi-threaded, at the expense of much of the parallelism afforded by multi-processor machines."
+hashable,"An object is hashable if it has a hash value which never changes during its lifetime (it needs a __hash__()method), and can be compared to other objects (it needs an __eq__() method). Hashable objects which compare equal must have the same hash value."
+hash-based pyc,A bytecode cache file that uses the hash rather than the last-modified time of the corresponding source file to determine its validity. 
+high level language,Designed to be easy for humans to read and write.
+IDLE,An Integrated Development Environment for Python. A basic editor and interpreter environment which ships with the standard distribution of Python.
+immutable,"An object with a fixed value. Immutable objects include numbers, strings and tuples. Such an object cannot be altered. A new object has to be created if a different value has to be stored. They play an important role in places where a constant hash value is needed, for example as a key in a dictionary."
+import path,"A list of locations (or path entries) that are searched by the path based finder for modules to import. During import, this list of locations usually comes from sys.path, but for subpackages it may also come from the parent package’s __path__ attribute."
+importer,An object that both finds and loads a module; both a finder and loader object.
+importing,The process by which Python code in one module is made available to Python code in another module.
+int,An immutable integer of unlimited magnitude.
+interpret,Execute a program by translating it one line at a time.
+Ipython,Interactive shell for interactive computing.
+iterable,"An object capable of returning its members one at a time. Examples of iterables include all sequence types (such as list, str, and tuple) and some non-sequence types like dict, file objects, and objects of any classes you define with an __iter__() method or with a __getitem__() method that implements Sequencesemantics."
+iterator,An object representing a stream of data. Repeated calls to the iterator’s __next__() method (or passing it to the built-in function next()) return successive items in the stream. When no more data are available a StopIteration exception is raised instead. 
+key function,a callable that returns a value used for sorting or ordering.
+keyword argument,An argument preceded by an identifier (e.g. name=) in a function call or passed as a value in a dictionary preceded by **. 
+lambda,An anonymous inline function consisting of a single expression which is evaluated when the function is called. 
+LBYL,Look before you leap. This coding style explicitly tests for pre-conditions before making calls or lookups. This style contrasts with the EAFP approach and is characterized by the presence of many if statements.
+list,A built-in Python sequence. Despite its name it is more akin to an array in other languages than to a linked list since access to elements is O(1).
+list comprehension,A compact way to process all or part of the elements in a sequence and return a list with the results.
+Literals,Notations for constant values of some built-in types.
+loader,An object that loads a module. It must define a method named load_module(). 
+mapping,A container object that supports arbitrary key lookups and implements the methods specified in the Mappingor MutableMapping abstract base classes. 
+meta path finder,"A finder returned by a search of sys.meta_path. Meta path finders are related to, but different from path entry finders.
+"
+metaclass,"The class of a class. Class definitions create a class name, a class dictionary, and a list of base classes. The metaclass is responsible for taking those three arguments and creating the class. "
+method,A function which is defined inside a class body.
+method resolution order,Method Resolution Order is the order in which base classes are searched for a member during lookup.
+module,An object that serves as an organizational unit of Python code.
+module spec,A namespace containing the import-related information used to load a module.
+mutable,An object that can change their value but keep their id()
+name space,The place where a variable is stored. It is implemented as a dictionary. It support modularity by preventing naming conflicts. 
+named tuple,"Any tuple-like class whose indexable elements are also accessible using named attributes (for example, time.localtime() returns a tuple-like object where the year is accessible either with an index such as t[0] or with a named attribute like t.tm_year)."
+namespace package,"A package which serves only as a container for subpackages. They may have no physical representation, and specifically are not like a regular package because they have no __init__.pyfile."
+nested scope,"The ability to refer to a variable in an enclosing definition. For instance, a function defined inside another function can refer to variables in the outer function."
+new-style class,Old name for the flavor of classes now used for all class objects. 
+object,Any data with state (attributes or value) and defined behavior (methods). Also the ultimate base class of any new-style class.
+object-oriented,allows users to manipulate data structures called objects in order to build and execute programs
+package,"A Python module which can contain submodules or recursively, subpackages. It is a Python module with an __path__ attribute."
+parameter,"A named entity in a function (or method) definition that specifies an argument (or in some cases, arguments) that the function can accept. There are five kinds of parameter:"
+pass,Needed to create an empty code block
+path based finder,One of the default meta path finders which searches an import path for modules.
+path entry,A single location on the import path which the path based finder consults to find modules for importing.
+path entry finder,A finder returned by a callable on sys.path_hooks (i.e. a path entry hook) which knows how to locate modules given a path entry.
+path entry hook,A callable on the sys.path_hook list which returns a path entry finder if it knows how to find modules on a specific path entry.
+path-like object,An object representing a file system path.
+PEP,"Python Enhancement Proposal. It is a design document providing information to the Python community, or describing a new feature for Python or its processes or environment. "
+PEP 8,A set of recommendations how to write Python code.
+portion,A set of files in a single directory (possibly stored in a zip file) that contribute to a namespace package
+positional argument:,An argument that is not a keyword argument. Positional arguments can appear at the beginning of an argument list and/or be passed as elements of an iterable preceded by *
+provisional API,An API that has been deliberately excluded from the standard library’s backwards compatibility guarantees. 
+Python 3000,Nickname for the Python 3.x release line (coined long ago when the release of version 3 was something in the distant future.) 
+Python Package Index,Official repository of third-party software for Python
+Pythonic,"An idea or piece of code which closely follows the most common idioms of the Python language, rather than implementing code using concepts common to other languages. "
+qualified name ,"A dotted name showing the “path” from a module’s global scope to a class, function or method defined in that module"
+reference count,The number of references to an object. 
+regular package,"A traditional package, such as a directory containing an __init__.py file."
+sequence,"An iterable which supports efficient element access using integer indices via the __getitem__() special method and defines a __len__() method that returns the length of the sequence. Some built-in types are list, str, tuple, and bytes. Note that dict also supports __getitem__() and __len__(), but is considered a mapping rather than this because the lookups use arbitrary immutable keys rather than integers."
+set,"Unordered set, contains no duplicates"
+single dispatch,A form of generic function dispatch where the implementation is chosen based on the type of a single argument.
+slice,"An object usually containing a portion of a sequence. It is created using the subscript notation, [] with colons between numbers when several are given, such as in variable_name[1:3:5]. "
+special method,"A method that is called implicitly by Python to execute a certain operation on a type, such as addition. Such methods have names starting and ending with double underscores. "
+statement,"It is part of a suite (a “block” of code). It is either an expression or one of several constructs with a keyword, such as if, while or for."
+str,A character string: an immutable sequence of Unicode codepoints.
+strings,"Can include numbers, letters, and various symbols and be enclosed by either double or single quotes, although single quotes are more commonly used."
+struct sequence,A tuple with named elements.
+text encoding,A codec which encodes Unicode strings to bytes.
+text file,A file object able to read and write str objects. 
+triple-quoted string,"A string which is bound by three instances of either a quotation mark (“) or an apostrophe (‘). They allow you to include unescaped single and double quotes within a string and they can span multiple lines without the use of the continuation character, making them especially useful when writing docstrings."
+try,Allows exceptions raised in its attached code block to be caught and handled by except clauses.
+tuple,"Immutable, can contain mixed types."
+type,Every object has this and it determines what kind of object it is. 
+type hint,"An annotation that specifies the expected type for a variable, a class attribute, or a function parameter or return value."
+universal newlines,A manner of interpreting text streams in which all of the following are recognized as ending a line
+variable annotation,An annotation of a variable or a class attribute.
+variables,Placeholder for texts and numbers. 
+virtual environment,A cooperatively isolated runtime environment that allows Python users and applications to install and upgrade Python distribution packages without interfering with the behaviour of other Python applications running on the same system.
+virtual machine,A computer defined entirely in software. 
+while,Executes a block of code as long as its condition is true.
+with,Encloses a code block within a context manager.
+yield,Returns a value from a generator function.
+Zen of Python,Listing of Python design principles and philosophies that are helpful in understanding and using the language. The listing can be found by typing “import this” at the interactive prompt.
